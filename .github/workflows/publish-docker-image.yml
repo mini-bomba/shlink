@@ -15,10 +15,10 @@ jobs:
           - runtime: 'rr'
             tag-suffix: 'roadrunner'
             platforms: 'linux/arm64/v8,linux/amd64'
-    uses: shlinkio/github-actions/.github/workflows/docker-publish-image.yml@main
+    uses: mini-bomba/shlink-github-actions/.github/workflows/docker-publish-image.yml@main
     secrets: inherit
     with:
-      image-name: shlinkio/shlink
+      image-name: mini-bomba/shlink
       version-arg-name: SHLINK_VERSION
       platforms: ${{ matrix.platforms }}
       tags-suffix: ${{ matrix.tag-suffix }}
