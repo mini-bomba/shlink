@@ -17,6 +17,8 @@ jobs:
             platforms: 'linux/arm64/v8,linux/amd64'
     uses: mini-bomba/shlink-github-actions/.github/workflows/docker-publish-image.yml@main
     secrets: inherit
+    permissions:
+      packages: write
     with:
       image-name: mini-bomba/shlink
       version-arg-name: SHLINK_VERSION
